@@ -26,6 +26,13 @@ def mumul(a, b):
     >>> mul(-1, 5)
     -5
     """
+    if a == 0 or b == 0:
+        return 0
+    if a < 0 and b < 0:
+        a = -a
+        b = -b
+    elif b < 0:
+        a, b = -a, -b
     m = 0
     for _ in range(b):
         m += a
@@ -63,3 +70,4 @@ def add(a, b):
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
+    
